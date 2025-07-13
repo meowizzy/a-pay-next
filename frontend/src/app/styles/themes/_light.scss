@@ -1,0 +1,25 @@
+[data-theme="light"] {
+  --color-white-rgb: 255, 255, 255;
+  --color-white: rgb(var(--color-white-rgb));
+
+  --color-black-rgb: 0, 0, 0;
+  --color-black: rgb(var(--color-black-rgb));
+
+  --color-primary-rgb: 0, 191, 218;
+  --color-primary: rgb(var(--color-primary-rgb));
+
+  --color-bg-primary-rgb: var(--color-white-rgb);
+  --color-bg-primary: rgb(var(--color-primary-rgb));
+
+  --color-bg-secondary-rgb: 242, 242, 247;
+  --color-bg-secondary: rgb(var(--color-bg-secondary-rgb));
+
+  --color-text-primary-rgb: 20, 23, 30;
+  --color-text-primary: rgb(var(--color-text-primary));
+
+  --color-text-secondary-rgb: 123, 128, 147;
+  --color-text-secondary: rgb(var(--color-text-secondary-rgb));
+
+  --color-border-rgb: 236, 239, 245;
+  --color-border: rgb(var(--color-border-rgb));
+}

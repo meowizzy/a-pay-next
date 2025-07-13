@@ -1,0 +1,10 @@
+{
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "importOrder": [
+    "^@hooks/(.*)$",
+    "<THIRD_PARTY_MODULES>",
+    "^@ui/(.*)$",
+    "^[./]"
+  ]
+}

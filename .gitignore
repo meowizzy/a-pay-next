@@ -1,0 +1,13 @@
+/.idea/
+.DS_Store
+
+/cms/node_modules/
+/cms/build/
+/cms/dist/
+/cms/.idea/
+
+/frontend/node_modules/
+/frontend/dist/
+/frontend/build/
+/frontend/.idea/
+/frontend/.next/
