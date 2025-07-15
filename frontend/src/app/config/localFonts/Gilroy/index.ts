@@ -2,7 +2,7 @@ import localFont from "next/font/local";
 
 export const Gilroy = localFont({
   display: "swap",
-  variable: "--font-family",
+  variable: "--global-font-family",
   src: [
     {
       path: "../../../../shared/assets/fonts/Gilroy/Gilroy-Thin.woff",

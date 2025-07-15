@@ -9,13 +9,22 @@
   --color-primary: rgb(var(--color-primary-rgb));
 
   --color-bg-primary-rgb: var(--color-white-rgb);
-  --color-bg-primary: rgb(var(--color-primary-rgb));
+  --color-bg-primary: rgb(var(--color-bg-primary-rgb));
+
+  --iverted-color-bg-primary-rgb: 14, 14, 16;
+  --iverted-color-bg-primary: rgb(var(--iverted-color-bg-primary-rgb));
 
   --color-bg-secondary-rgb: 242, 242, 247;
   --color-bg-secondary: rgb(var(--color-bg-secondary-rgb));
 
+  --color-bg-tertiary-rgb: var(--color-white-rgb);
+  --color-bg-tertiary: rgb(var(--color-bg-tertiary-rgb));
+
+  --color-danger-rgb: 194, 86, 86;
+  --color-danger: rgb(var(--color-danger-rgb));
+
   --color-text-primary-rgb: 20, 23, 30;
-  --color-text-primary: rgb(var(--color-text-primary));
+  --color-text-primary: rgb(var(--color-text-primary-rgb));
 
   --color-text-secondary-rgb: 123, 128, 147;
   --color-text-secondary: rgb(var(--color-text-secondary-rgb));

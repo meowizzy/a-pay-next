@@ -1,0 +1,75 @@
+@keyframes visible {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hidden {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+}
+
+.content {
+  --content-padding: 8px;
+
+  background-color: var(--color-bg-tertiary);
+  padding: var(--content-padding);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-bg-secondary);
+  min-width: 210px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+
+  &[data-state="open"] {
+    animation: visible var(--transition-fast);
+  }
+
+  &[data-state="closed"] {
+    animation: hidden var(--transition-fast);
+  }
+}
+
+.trigger {
+
+  svg {
+    transition: .3s !important;
+  }
+
+  &[data-state="open"] {
+    svg {
+      transform: rotateX(180deg);
+    }
+  }
+
+  &[data-state="close"] {
+    svg {
+      transform: rotateX(0);
+    }
+  }
+}
+
+.item {
+  padding: 0 8px;
+  cursor: pointer;
+  transition: background-color var(--transition-default), color var(--transition-default);
+  border-radius: calc(var(--radius-md) - var(--content-padding));
+  line-height: var(--height-md);
+  outline: none;
+
+  &:hover, &.itemActive {
+    color: var(--color-white);
+    background-color: var(--color-primary);
+  }
+}

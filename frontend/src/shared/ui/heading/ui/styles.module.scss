@@ -1,0 +1,31 @@
+.heading {
+  &.xs {
+    font-size: var(--font-size-xs);
+    line-height: var(--font-line-xs);
+  }
+
+  &.sm {
+    font-size: var(--font-size-sm);
+    line-height: var(--font-line-sm);
+  }
+
+  &.md {
+    font-size: var(--font-size-md);
+    line-height: var(--font-line-md);
+  }
+
+  &.lg {
+    font-size: var(--font-size-lg);
+    line-height: var(--font-line-lg);
+  }
+
+  &.xl {
+    font-size: var(--font-size-xl);
+    line-height: var(--font-line-xl);
+  }
+
+  &.xxl {
+    font-size: var(--font-size-xxl);
+    line-height: var(--font-line-xxl);
+  }
+}
