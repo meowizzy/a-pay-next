@@ -1,12 +1,21 @@
 "use client";
 
-import { useTheme } from "next-themes";
 import { useIsMounted } from "@shared/lib/hooks/use-is-mounted";
 import { Dropdown } from "@ui/dropdown";
-import { appThemes } from "@shared/const/themes";
+import { useTranslation } from "@shared/lib/hooks/use-translation";
+
+import { E_THEMES } from "@shared/types/themes";
+import { useAppTheme } from "@hooks/use-app-theme";
+
+const themesAnnotations: Record<E_THEMES, string> = {
+  [E_THEMES.SYSTEM]: "themes.system",
+  [E_THEMES.LIGHT]: "themes.light",
+  [E_THEMES.DARK]: "themes.dark",
+};
 
 export const ThemeSwitcher = () => {
-  const { setTheme, theme } = useTheme();
+  const { setAppTheme, appTheme } = useAppTheme();
+  const t = useTranslation();
 
   const isMounted = useIsMounted();
 
@@ -16,17 +25,21 @@ export const ThemeSwitcher = () => {
 
   return (
     <Dropdown>
-      <Dropdown.Trigger>{theme && appThemes[theme]}</Dropdown.Trigger>
+      <Dropdown.Trigger>
+        {appTheme && t(themesAnnotations[appTheme] as any)}
+      </Dropdown.Trigger>
       <Dropdown.Content align={"center"}>
-        {Object.entries(appThemes).map(([key, value]) => (
-          <Dropdown.Item
-            active={key === theme}
-            key={key}
-            onClick={() => setTheme(key)}
-          >
-            {value}
-          </Dropdown.Item>
-        ))}
+        {Object.entries(themesAnnotations).map(
+          ([theme, value]: [theme: E_THEMES, value: string]) => (
+            <Dropdown.Item
+              active={theme === appTheme}
+              key={theme}
+              onClick={() => setAppTheme(theme)}
+            >
+              {t(value as any)}
+            </Dropdown.Item>
+          ),
+        )}
       </Dropdown.Content>
     </Dropdown>
   );

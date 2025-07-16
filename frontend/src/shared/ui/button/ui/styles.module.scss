@@ -20,15 +20,15 @@
   font-family: inherit;
   text-decoration: none;
 
-  svg {
+  .prefix, .suffix {
     width: 24px;
     height: 24px;
     transition: fill var(--transition-default), stroke var(--transition-default);
-  }
+    line-height: 0;
 
-  span {
-    & + svg {
-      margin-right: 0;
+    & > * {
+      max-width: 100%;
+      max-height: 100%;
     }
   }
 
@@ -96,38 +96,32 @@
 }
 
 .gap-sm {
-  svg {
+  .prefix {
     margin-right: var(--gap-sm);
   }
 
-  span {
-    & + svg {
-      margin-left: var(--gap-sm);
-    }
+  .suffix {
+    margin-left: var(--gap-sm);
   }
 }
 
 .gap-md {
-  svg {
+  .prefix {
     margin-right: var(--gap-md);
   }
 
-  span {
-    & + svg {
-      margin-left: var(--gap-md);
-    }
+  .suffix {
+    margin-left: var(--gap-md);
   }
 }
 
 .gap-lg {
-  svg {
+  .prefix {
     margin-right: var(--gap-lg);
   }
 
-  span {
-    & + svg {
-      margin-left: var(--gap-lg);
-    }
+  .suffix {
+    margin-left: var(--gap-lg);
   }
 }
 
@@ -151,7 +145,7 @@
 }
 
 .onlyIcon {
-  &:before, svg {
+  &:before, .prefix, .suffix {
     margin-right: 0;
   }
 }

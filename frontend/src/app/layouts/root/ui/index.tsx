@@ -4,21 +4,44 @@ import { ThemeProvider } from "next-themes";
 import cn from "classnames";
 import "@styles/index.scss";
 import { Header } from "@widgets/header";
+import { hasLocale, NextIntlClientProvider } from "next-intl";
+import routing from "@config/i18n/routing";
+import { redirect } from "next/navigation";
+import { E_THEMES } from "@shared/types/themes";
 
-const RootLayout = (props: { children: ReactNode }) => {
-  const { children } = props;
+type PropsType = {
+  children: ReactNode;
+  params: Promise<{
+    locale: string;
+  }>;
+};
+
+const RootLayout = async (props: PropsType) => {
+  const { children, params } = props;
+  const { locale } = await params;
+
+  if (!hasLocale(routing.locales, locale)) {
+    redirect("/");
+  }
 
   return (
-    <html lang="ru" className={cn(Gilroy.variable)} suppressHydrationWarning>
+    <html
+      lang={locale}
+      className={cn(Gilroy.variable)}
+      suppressHydrationWarning
+    >
       <body>
-        <ThemeProvider
-          attribute={"data-theme"}
-          enableColorScheme={false}
-          enableSystem
-        >
-          <Header />
-          {children}
-        </ThemeProvider>
+        <NextIntlClientProvider>
+          <ThemeProvider
+            attribute={"data-theme"}
+            enableColorScheme={false}
+            themes={[E_THEMES.SYSTEM, E_THEMES.LIGHT, E_THEMES.DARK]}
+            enableSystem
+          >
+            <Header />
+            {children}
+          </ThemeProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

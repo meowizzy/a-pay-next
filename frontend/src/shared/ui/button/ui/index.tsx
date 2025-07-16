@@ -47,9 +47,13 @@ export const Button = memo((props: PropsType) => {
   const getChildren = () => {
     return (
       <>
-        {!!prefixIcon && !loading && prefixIcon}
+        {!!prefixIcon && !loading && (
+          <span className={cn("prefix", styles.prefix)}>{prefixIcon}</span>
+        )}
         {!!children && <span>{children}</span>}
-        {!!suffixIcon && !loading && suffixIcon}
+        {!!suffixIcon && !loading && (
+          <span className={cn("suffix", styles.suffix)}>{suffixIcon}</span>
+        )}
       </>
     );
   };

@@ -6,17 +6,22 @@ import { Button } from "@ui/button";
 import ArrowDownIcon from "@svg/arrowDown.svg";
 import { ReactNode } from "react";
 
-type PropsType = Omit<DropdownMenuTriggerProps, "children"> & {
-  children: ReactNode;
+type PropsType = DropdownMenuTriggerProps & {
+  icon?: ReactNode;
 };
 
 export const DropdownTrigger = (props: PropsType) => {
-  const { className, children, ...restProps } = props;
+  const { className, icon, children, ...restProps } = props;
   const classesCompose = cn(styles.trigger, className);
 
   return (
     <DropdownMenu.Trigger asChild className={classesCompose} {...restProps}>
-      <Button theme={"clear"} suffixIcon={<ArrowDownIcon />} gap={"sm"}>
+      <Button
+        theme={"clear"}
+        prefixIcon={icon}
+        suffixIcon={<ArrowDownIcon />}
+        gap={"sm"}
+      >
         {children}
       </Button>
     </DropdownMenu.Trigger>

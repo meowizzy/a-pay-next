@@ -1,4 +1,6 @@
-export const enum E_MENU_PATHS {
+import { ReactNode } from "react";
+
+export const enum E_ROUTE_PATHS {
   HOME = "/",
   BUSINESS = "/business",
   ACQUIRING = "/acquiring",
@@ -6,7 +8,9 @@ export const enum E_MENU_PATHS {
   DOCUMENTS = "/documents",
 }
 
-export type MenuItemType = {
-  label: string;
-  path: E_MENU_PATHS;
+export type MenuTreeType = {
+  label: ReactNode;
+  path: string;
+  flag?: string;
+  children?: Array<MenuTreeType>;
 };

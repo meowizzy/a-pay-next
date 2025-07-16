@@ -32,6 +32,7 @@
       "@config/*": ["src/app/config/*"],
       "@svg/*": ["src/shared/assets/svg/*"],
       "@pages/*": ["src/pages/*"],
+      "@hooks/*": ["src/shared/lib/hooks/*"],
       "@ui/*": ["src/shared/ui/*"],
       "@widgets/*": ["src/widgets/*"],
       "@entities/*": ["src/entities/*"],

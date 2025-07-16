@@ -43,18 +43,18 @@
 
 .trigger {
 
-  svg {
+  & :global(.suffix) {
     transition: .3s !important;
   }
 
   &[data-state="open"] {
-    svg {
+    & :global(.suffix) {
       transform: rotateX(180deg);
     }
   }
 
   &[data-state="close"] {
-    svg {
+    & :global(.suffix) {
       transform: rotateX(0);
     }
   }
