@@ -8,6 +8,7 @@ import { hasLocale, NextIntlClientProvider } from "next-intl";
 import routing from "@config/i18n/routing";
 import { redirect } from "next/navigation";
 import { E_THEMES } from "@shared/types/themes";
+import NextTopLoader from "nextjs-toploader";
 
 type PropsType = {
   children: ReactNode;
@@ -31,6 +32,7 @@ const RootLayout = async (props: PropsType) => {
       suppressHydrationWarning
     >
       <body>
+        <NextTopLoader height={3} color="var(--color-primary)" />
         <NextIntlClientProvider>
           <ThemeProvider
             attribute={"data-theme"}
