@@ -9,7 +9,7 @@ type PropsType = {
 
 export const DropdownItem = (props: PropsType) => {
   const { className, active, ...restProps } = props;
-  const classesCompose = cn(styles.item, className, {
+  const classesCompose = cn(styles.item, className, "menu-dropdown-item", {
     [styles.itemActive]: !!active,
   });
 

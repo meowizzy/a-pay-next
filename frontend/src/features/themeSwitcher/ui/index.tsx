@@ -2,7 +2,7 @@
 
 import { useIsMounted } from "@shared/lib/hooks/use-is-mounted";
 import { Dropdown } from "@ui/dropdown";
-import { useTranslation } from "@shared/lib/hooks/use-translation";
+import { useAppTranslations } from "@shared/lib/hooks/use-translation";
 
 import { E_THEMES } from "@shared/types/themes";
 import { useAppTheme } from "@hooks/use-app-theme";
@@ -15,7 +15,7 @@ const themesAnnotations: Record<E_THEMES, string> = {
 
 export const ThemeSwitcher = () => {
   const { setAppTheme, appTheme } = useAppTheme();
-  const t = useTranslation();
+  const t = useAppTranslations();
 
   const isMounted = useIsMounted();
 

@@ -8,9 +8,22 @@ export const useCurrentLang = () => {
   const locale = useLocale();
 
   const changeLanguage = (lang: E_LOCALES) => {
-    router.replace(pathname, {
-      locale: lang,
-    });
+    const isDefaultLang = lang === E_LOCALES.RU;
+    let queryParams = {};
+
+    if (isDefaultLang) {
+      queryParams["lang"] = "ru";
+    }
+
+    router.replace(
+      {
+        pathname: pathname,
+        query: queryParams,
+      },
+      {
+        locale: lang,
+      },
+    );
     router.refresh();
   };
 

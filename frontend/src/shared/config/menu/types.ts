@@ -1,5 +1,3 @@
-import { ReactNode } from "react";
-
 export const enum E_ROUTE_PATHS {
   HOME = "/",
   BUSINESS = "/business",
@@ -9,7 +7,7 @@ export const enum E_ROUTE_PATHS {
 }
 
 export type MenuTreeType = {
-  label: ReactNode;
+  label: string;
   path: string;
   flag?: string;
   children?: Array<MenuTreeType>;

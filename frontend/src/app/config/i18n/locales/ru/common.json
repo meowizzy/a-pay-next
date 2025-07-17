@@ -3,5 +3,27 @@
     "system": "Системная",
     "light": "Светлая",
     "dark": "Темная"
+  },
+  "menu": {
+    "about": "О компании",
+    "news": "Новости",
+    "documents": "Документы",
+    "individuals": "Часным лицам",
+    "myCity": "Мой город",
+    "airlineTickets": "Авиабилеты",
+    "insurancePolicy": "Страховой полис",
+    "forBusiness": "Для бизнеса",
+    "aPayBusiness": "A-Pay Business",
+    "aPayAcquiring": "A-Pay acquiring",
+    "aPayForIos": "A-Pay для IOS",
+    "aPayForAndroid": "A-Pay для Android",
+    "download": "Скачать"
+  },
+  "titles": {
+    "soon": "Скоро"
+  },
+  "copyright": {
+    "license": "Лицензия Центрального Банка Республики Узбекистан №21",
+    "year": "© {fromYear}-{toYear}. Все права защищены.  АО CDTI"
   }
 }

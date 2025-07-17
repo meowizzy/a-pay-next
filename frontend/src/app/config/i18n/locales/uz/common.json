@@ -3,5 +3,27 @@
     "system": "Tizimli",
     "light": "Yorug‘",
     "dark": "Tungi"
+  },
+  "menu": {
+    "about": "Kompaniya haqida",
+    "news": "Yangiliklar",
+    "documents": "Hujjatlar",
+    "individuals": "Jismoniy shaxslarga",
+    "myCity": "Mening shahrim",
+    "airlineTickets": "Aviabiletlar",
+    "insurancePolicy": "Sug‘urta polisi",
+    "forBusiness": "Biznes uchun",
+    "aPayBusiness": "A-Pay Business",
+    "aPayAcquiring": "A-Pay acquiring",
+    "aPayForIos": "iOS uchun A-Pay",
+    "aPayForAndroid": "Android uchun A-Pay",
+    "download": "Yuklab olish"
+  },
+  "titles": {
+    "soon": "Tez orada"
+  },
+  "copyright": {
+    "license": "O‘zbekiston Respublikasi Markaziy bankining 21-sonli litsenziyasi",
+    "year": "© {fromYear}-{toYear}. Barcha huquqlar himoyalangan.  АJ CDTI"
   }
 }

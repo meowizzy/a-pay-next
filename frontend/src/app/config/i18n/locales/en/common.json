@@ -3,5 +3,27 @@
     "system": "System",
     "light": "Light",
     "dark": "Dark"
+  },
+  "menu": {
+    "about": "About company",
+    "news": "News",
+    "documents": "Documents",
+    "individuals": "For individuals",
+    "myCity": "My city",
+    "airlineTickets": "Airline tickets",
+    "insurancePolicy": "Insurance policy",
+    "forBusiness": "For business",
+    "aPayBusiness": "A-Pay Business",
+    "aPayAcquiring": "A-Pay acquiring",
+    "aPayForIos": "A-Pay for IOS",
+    "aPayForAndroid": "A-Pay for Android",
+    "download": "Download"
+  },
+  "titles": {
+    "soon": "Soon"
+  },
+  "copyright": {
+    "license": "License № 21 of the Central Bank of the Republic of Uzbekistan",
+    "year": "© {fromYear}-{toYear}. All rights reserved.  JC CDTI"
   }
 }

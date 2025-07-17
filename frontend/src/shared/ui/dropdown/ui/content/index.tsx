@@ -5,7 +5,7 @@ import styles from "../styles.module.scss";
 
 export const DropdownContent = (props: DropdownMenuContentProps) => {
   const { className, ...restProps } = props;
-  const classesCompose = cn(styles.content, className);
+  const classesCompose = cn(styles.content, className, "menu-dropdown");
 
   return (
     <DropdownMenu.Portal>

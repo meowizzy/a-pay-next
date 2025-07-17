@@ -8,6 +8,11 @@ import { E_LOCALES } from "@config/i18n/locales";
 export const LanguageSwitcher = () => {
   const { changeLanguage, currentLang } = useCurrentLang();
 
+  const onLangChange = (locale) => {
+    console.log("CHANGE LANGUAGE:+++++", locale);
+    changeLanguage(locale);
+  };
+
   return (
     <Dropdown>
       <Dropdown.Trigger icon={localesMeta[currentLang].flag} />
@@ -17,7 +22,7 @@ export const LanguageSwitcher = () => {
             <Dropdown.Item
               key={lang}
               active={lang === currentLang}
-              onClick={() => changeLanguage(lang)}
+              onClick={() => onLangChange(lang)}
             >
               {meta.annotation}
             </Dropdown.Item>

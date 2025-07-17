@@ -1,0 +1,16 @@
+.banner {
+  & > :global(.container) {
+    padding: 204px 50px 140px;
+    background: var(--banner-background) top center no-repeat;
+  }
+
+  text-align: center;
+
+  .bannerTitle {
+    margin-bottom: 24px;
+  }
+
+  .bannerBottom {
+    margin-top: 64px;
+  }
+}

@@ -1,0 +1,132 @@
+.navigation {
+  .list {}
+
+  .label {
+    line-height: 1;
+  }
+
+  .flag {
+    color: var(--flag-color);
+    font-size: var(--font-size-xs);
+    line-height: var(--font-line-xs);
+    display: inline-block;
+    transition: color var(--transition-default);
+  }
+
+  .itemArrow {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+
+  .menuTypeDefault {
+    & > .item {
+      & > a {
+        font-weight: 600;
+      }
+
+      .flag {
+        margin-left: 2px;
+      }
+
+      ul {
+        li {
+          a {
+            font-size: var(--font-size-xs);
+            line-height: var(--font-line-xs);
+            color: var(--color-text-secondary);
+
+            &:hover {
+              color: var(--color-primary);
+            }
+          }
+
+          margin-top: 8px;
+        }
+      }
+    }
+  }
+
+  .menuTypeMain {
+    .item {
+      position: relative;
+
+      & :global(.menu-dropdown) {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%) translateY(5px);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity var(--transition-default), transform var(--transition-default);
+
+        a {
+          --flag-color: var(--color-text-secondary);
+          min-height: var(--height-md);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          transition: background-color var(--transition-default), color var(--transition-default);
+          padding: var(--content-padding);
+          border-radius: calc(var(--radius-md) - var(--content-padding));
+
+          &:hover {
+            --flag-color: var(--color-white);
+
+            background-color: var(--color-primary);
+            color: var(--color-white);
+          }
+        }
+      }
+
+      &:global(.has-children) {
+        &:hover {
+          & :global(.menu-dropdown) {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+            pointer-events: all;
+          }
+        }
+      }
+    }
+
+    .flag {
+      margin-top: 2px;
+    }
+
+    & > .item {
+      margin-right: 16px;
+      min-height: 40px !important;
+
+      .itemArrow {
+        margin-left: 4px;
+      }
+
+      li {
+        padding: 0 !important;
+        min-height: 0 !important;
+        border-radius: 0 !important;
+        background-color: transparent !important;
+
+        a {
+          width: 100%;
+        }
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .item {
+    a {
+      color: var(--color-text-primary);
+      transition: color var(--transition-default);
+
+      &:hover {
+        color: var(--color-primary);
+      }
+    }
+  }
+}
