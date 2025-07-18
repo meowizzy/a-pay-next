@@ -3,6 +3,14 @@ import { Gilroy } from "@config/localFonts/Gilroy";
 import { ReactNode } from "react";
 import { BaseLayout } from "@layouts/base";
 import "@styles/index.scss";
+import { allSettled, fork, serialize } from "effector";
+import { EffectorNext } from "@effector/next";
+import { createQuery } from "@farfetched/core";
+import {
+  firstQuery,
+  globalDataStarted,
+  globalStartedFx,
+} from "@shared/api/global";
 
 type PropsType = {
   children: ReactNode;
@@ -22,7 +30,9 @@ const RootLayout = async (props: PropsType) => {
       suppressHydrationWarning
     >
       <body>
-        <BaseLayout>{children}</BaseLayout>
+        <EffectorNext>
+          <BaseLayout>{children}</BaseLayout>
+        </EffectorNext>
       </body>
     </html>
   );

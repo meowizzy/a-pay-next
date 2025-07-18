@@ -1,0 +1,15 @@
+.infoContainer {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 16px 14px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.label {
+  padding: 0 16px;
+  font-size: var(--font-size-sm);
+  line-height: var(--font-line-sm);
+}

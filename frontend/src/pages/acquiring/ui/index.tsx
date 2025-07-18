@@ -1,5 +1,12 @@
+import { BannerSection } from "./sections/banner";
+import styles from "./styles.module.scss";
+
 const AcquiringPage = () => {
-  return <h1>Home page</h1>;
+  return (
+    <>
+      <BannerSection />
+    </>
+  );
 };
 
 export default AcquiringPage;

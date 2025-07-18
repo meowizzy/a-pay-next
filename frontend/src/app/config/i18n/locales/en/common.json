@@ -22,6 +22,9 @@
   "titles": {
     "soon": "Soon"
   },
+  "buttons": {
+    "leaveRequest": "Leave a request"
+  },
   "copyright": {
     "license": "License № 21 of the Central Bank of the Republic of Uzbekistan",
     "year": "© {fromYear}-{toYear}. All rights reserved.  JC CDTI"

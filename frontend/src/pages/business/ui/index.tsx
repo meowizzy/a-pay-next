@@ -1,5 +1,11 @@
+import { BannerSection } from "./sections/banner";
+
 const BusinessPage = () => {
-  return <h1>Business</h1>;
+  return (
+    <>
+      <BannerSection />
+    </>
+  );
 };
 
 export default BusinessPage;

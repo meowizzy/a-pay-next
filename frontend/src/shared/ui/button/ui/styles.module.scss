@@ -157,6 +157,8 @@
 
 .secondary {
   background-color: var(--color-bg-secondary);
+  font-weight: 500;
+  color: var(--color-text-primary);
 
   &:after {
     background-color: var(--color-black);

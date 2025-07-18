@@ -2,9 +2,14 @@
   & > :global(.container) {
     padding: 204px 50px 140px;
     background: var(--banner-background) top center no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  text-align: center;
+  .bannerTitle, .bannerSubtitle {
+    text-align: center;
+  }
 
   .bannerTitle {
     margin-bottom: 24px;

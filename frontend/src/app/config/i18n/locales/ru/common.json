@@ -22,6 +22,9 @@
   "titles": {
     "soon": "Скоро"
   },
+  "buttons": {
+    "leaveRequest": "Оставить заявку"
+  },
   "copyright": {
     "license": "Лицензия Центрального Банка Республики Узбекистан №21",
     "year": "© {fromYear}-{toYear}. Все права защищены.  АО CDTI"

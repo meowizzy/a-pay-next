@@ -22,6 +22,9 @@
   "titles": {
     "soon": "Tez orada"
   },
+  "buttons": {
+    "leaveRequest": "Ariza qoldirish"
+  },
   "copyright": {
     "license": "O‘zbekiston Respublikasi Markaziy bankining 21-sonli litsenziyasi",
     "year": "© {fromYear}-{toYear}. Barcha huquqlar himoyalangan.  АJ CDTI"

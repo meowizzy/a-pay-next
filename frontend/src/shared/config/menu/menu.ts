@@ -42,11 +42,11 @@ export const menuItems: Array<MenuTreeType> = [
     children: [
       {
         label: "menu.aPayBusiness",
-        path: "#",
+        path: E_ROUTE_PATHS.BUSINESS,
       },
       {
         label: "menu.aPayAcquiring",
-        path: "#",
+        path: E_ROUTE_PATHS.ACQUIRING,
       },
     ],
   },
